@@ -50,13 +50,14 @@ namespace EmployeeMgmt1
             foreach (DataRow dr in Con.GetData(Query).Rows)
             {
                 DSal = Convert.ToInt32(dr["EmpSal"].ToString());
-            }           
+            }
             //MessageBox.Show("" + DSal);
 
-            if(DaysTb.Text == "")
+            if (DaysTb.Text == "")
             {
                 AmountTb.Text = "₹ " + (d * DSal);
-            }else if(Convert.ToInt32(DaysTb.Text) > 31)
+            }
+            else if (Convert.ToInt32(DaysTb.Text) > 31)
             {
                 MessageBox.Show("Days Cannot be gretae than 31.");
             }
@@ -96,12 +97,33 @@ namespace EmployeeMgmt1
             catch (Exception Ex)
             {
                 MessageBox.Show(Ex.Message);
-            }          
+            }
         }
 
         private void EmpCb_SelectionChangeCommitted(object sender, EventArgs e)
         {
             GetSalary();
+        }
+
+        private void EmployeeLbl_Click(object sender, EventArgs e)
+        {
+            Employees Obj = new Employees();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void DepartmentLbl_Click(object sender, EventArgs e)
+        {
+            Departments Obj = new Departments();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void LogoutLbl_Click(object sender, EventArgs e)
+        {
+            Login Obj = new Login();
+            Obj.Show();
+            this.Hide();
         }
     }
 }

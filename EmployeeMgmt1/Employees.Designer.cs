@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employees));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             panel1 = new Panel();
             label1 = new Label();
             label2 = new Label();
@@ -53,11 +53,11 @@
             pictureBox2 = new PictureBox();
             label9 = new Label();
             pictureBox3 = new PictureBox();
-            label10 = new Label();
+            DepartmentLbl = new Label();
             pictureBox4 = new PictureBox();
-            label11 = new Label();
+            SalaryLbl = new Label();
             pictureBox5 = new PictureBox();
-            label12 = new Label();
+            LogoutLbl = new Label();
             EmployeeList = new DataGridView();
             DeleteBtn = new Button();
             panel1.SuspendLayout();
@@ -299,16 +299,17 @@
             pictureBox3.TabIndex = 26;
             pictureBox3.TabStop = false;
             // 
-            // label10
+            // DepartmentLbl
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.ForeColor = Color.Teal;
-            label10.Location = new Point(741, 107);
-            label10.Name = "label10";
-            label10.Size = new Size(131, 28);
-            label10.TabIndex = 27;
-            label10.Text = "Departments";
+            DepartmentLbl.AutoSize = true;
+            DepartmentLbl.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            DepartmentLbl.ForeColor = Color.Teal;
+            DepartmentLbl.Location = new Point(741, 107);
+            DepartmentLbl.Name = "DepartmentLbl";
+            DepartmentLbl.Size = new Size(131, 28);
+            DepartmentLbl.TabIndex = 27;
+            DepartmentLbl.Text = "Departments";
+            DepartmentLbl.Click += DepartmentLbl_Click;
             // 
             // pictureBox4
             // 
@@ -320,16 +321,17 @@
             pictureBox4.TabIndex = 26;
             pictureBox4.TabStop = false;
             // 
-            // label11
+            // SalaryLbl
             // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label11.ForeColor = Color.Teal;
-            label11.Location = new Point(977, 107);
-            label11.Name = "label11";
-            label11.Size = new Size(66, 28);
-            label11.TabIndex = 27;
-            label11.Text = "Salary";
+            SalaryLbl.AutoSize = true;
+            SalaryLbl.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            SalaryLbl.ForeColor = Color.Teal;
+            SalaryLbl.Location = new Point(977, 107);
+            SalaryLbl.Name = "SalaryLbl";
+            SalaryLbl.Size = new Size(66, 28);
+            SalaryLbl.TabIndex = 27;
+            SalaryLbl.Text = "Salary";
+            SalaryLbl.Click += SalaryLbl_Click;
             // 
             // pictureBox5
             // 
@@ -341,39 +343,40 @@
             pictureBox5.TabIndex = 26;
             pictureBox5.TabStop = false;
             // 
-            // label12
+            // LogoutLbl
             // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label12.ForeColor = Color.Teal;
-            label12.Location = new Point(1148, 107);
-            label12.Name = "label12";
-            label12.Size = new Size(86, 28);
-            label12.TabIndex = 27;
-            label12.Text = "Log Out";
+            LogoutLbl.AutoSize = true;
+            LogoutLbl.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LogoutLbl.ForeColor = Color.Teal;
+            LogoutLbl.Location = new Point(1148, 107);
+            LogoutLbl.Name = "LogoutLbl";
+            LogoutLbl.Size = new Size(86, 28);
+            LogoutLbl.TabIndex = 27;
+            LogoutLbl.Text = "Log Out";
+            LogoutLbl.Click += LogoutLbl_Click;
             // 
             // EmployeeList
             // 
             EmployeeList.BackgroundColor = Color.White;
             EmployeeList.BorderStyle = BorderStyle.None;
             EmployeeList.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.White;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F);
-            dataGridViewCellStyle1.ForeColor = Color.Teal;
-            dataGridViewCellStyle1.SelectionBackColor = Color.Teal;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            EmployeeList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 12F);
+            dataGridViewCellStyle3.ForeColor = Color.Teal;
+            dataGridViewCellStyle3.SelectionBackColor = Color.Teal;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            EmployeeList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             EmployeeList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.Teal;
-            dataGridViewCellStyle2.SelectionBackColor = Color.Teal;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            EmployeeList.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Window;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = Color.Teal;
+            dataGridViewCellStyle4.SelectionBackColor = Color.Teal;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            EmployeeList.DefaultCellStyle = dataGridViewCellStyle4;
             EmployeeList.GridColor = Color.White;
             EmployeeList.Location = new Point(461, 231);
             EmployeeList.Name = "EmployeeList";
@@ -406,9 +409,9 @@
             ClientSize = new Size(1300, 796);
             Controls.Add(DeleteBtn);
             Controls.Add(EmployeeList);
-            Controls.Add(label12);
-            Controls.Add(label11);
-            Controls.Add(label10);
+            Controls.Add(LogoutLbl);
+            Controls.Add(SalaryLbl);
+            Controls.Add(DepartmentLbl);
             Controls.Add(label9);
             Controls.Add(pictureBox5);
             Controls.Add(pictureBox4);
@@ -474,11 +477,11 @@
         private PictureBox pictureBox2;
         private Label label9;
         private PictureBox pictureBox3;
-        private Label label10;
+        private Label DepartmentLbl;
         private PictureBox pictureBox4;
-        private Label label11;
+        private Label SalaryLbl;
         private PictureBox pictureBox5;
-        private Label label12;
+        private Label LogoutLbl;
         private DataGridView EmployeeList;
         private Button DeleteBtn;
     }
